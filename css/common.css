@@ -1,0 +1,244 @@
+/*---------STANDART STYLES*------------*/
+html, body {
+    width:100%;
+    min-height:100%;
+    margin:0;
+    padding:0;
+    font-size:12px;
+}
+
+h2{
+    margin: 0 0 25px 0;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.clear{
+    clear: both;
+}
+
+#overflow_div {
+    position: relative;
+    width: 100%;
+    min-width: 1000px;
+    overflow: hidden;
+    margin-top: 100px;
+
+    background: #afd9bf;
+}
+
+.content-wraper {
+    position: relative;
+}
+
+.content {
+    position: relative;
+    margin: 0 auto;
+    width: 1000px;
+    background: #c9f4da;
+}
+/*---------/STANDART STYLES*------------*/
+
+
+/*---------HEADER------------*/
+header.content-wraper{
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    background: #658397;
+    z-index: 99;
+
+    /*чтоб не дергался фиксированный хедер*/
+    -webkit-transform: translate3d(0, 0, 0);
+    transform        : translate3d(0, 0, 0);
+}
+
+header .content{
+    background: #a1d2e8;
+}
+
+header .logo{
+    float: left;
+    width: 100px;
+    height: 100px;
+    background: #338077;
+}
+/*---------/HEADER------------*/
+
+
+/*---------MENU-TOP------------*/
+/*---------/core menu top------------*/
+.menu-top{
+    float: left;
+}
+
+.menu-top ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Обнуляем шрифт и line-height у родителя*/
+.menu-top > ul{
+    text-align: center;
+    line-height: 0;
+    font-size: 1px;
+    background: #F5F5F5;
+}
+
+/* доп элемент для выравнивания по ширине */
+.menu-top li.helper {
+    width: 100%;
+    height: 0;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+.menu-top > ul > li{
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+
+    /* Востанавливаем у потомков, кроме последнего*/
+    line-height: normal;
+    font-size: 14px;
+
+    /* Без него в Opera будет отступ под элементами */
+    vertical-align: top;
+}
+
+.menu-top ul li ul{
+    display:none;
+    position:absolute;
+    min-width:100%;
+    left: 0;
+    white-space: nowrap;
+}
+.menu-top ul li:hover ul{display:block}
+/*---------/core menu top------------*/
+
+/*---------main menu-top------------*/
+.menu-top > ul > li{
+    background-color:#F5F5F5;
+    text-align:center;
+}
+
+.menu-top > ul > li:hover{
+    background-color: #c9c9c9;
+}
+.menu-top > ul > li.selected{
+    background-color:#c9c9c9;
+}
+
+.menu-top > ul > li > a{
+    display: block;
+    padding:10px 10px;
+    border:1px solid #c9c9c9;
+    text-decoration:none;
+}
+/*---------/main menu-top------------*/
+
+/*---------sub menu-top------------*/
+.menu-top ul li ul{
+    background-color:#ffffff;
+    border:1px solid #E8E8E8;
+}
+
+.menu-top ul li ul li{
+    text-align:left;
+    padding:5px 15px 5px 15px;
+}
+
+.menu-top ul li ul li a{
+    text-decoration:none;
+}
+
+.menu-top ul li ul li a:hover{
+    color:#553CCF;
+}
+/*---------/sub menu-top------------*/
+/*---------/MENU-TOP------------*/
+
+
+/*---------CSS 3 ANIMATES------------*/
+.block{
+    font-size: 25px;
+    padding: 30px 20px;
+    margin-bottom: 50px;
+    text-align: justify;
+    background: #f6f6f6;
+}
+
+.item{
+    display: inline-block;
+    vertical-align: middle;
+    width: 300px;
+    height: 300px;
+    margin-right: 15px;
+    text-align: center;
+}
+
+.item1{
+    background: #ffc2a8;
+}
+
+.item2{
+    background: #85ffc5;
+}
+
+.item3{
+    background: #bbb3ff;
+}
+
+/*  скрываем все элементы, которые собираемся анимировать */
+.animated{
+    visibility: hidden;
+}
+
+/* Можно указать скорость анимации и др параметры */
+.item.fadeInDown:nth-child(1){
+    -webkit-animation-duration: 0.5s;
+    animation-duration:  0.5s;
+}
+
+.item.fadeInDown:nth-child(2){
+    -webkit-animation-duration: 0.8s;
+    animation-duration:  0.8s;
+}
+
+.item.fadeInDown:nth-child(3){
+    -webkit-animation-duration: 1.1s;
+    animation-duration:  1.1s;
+}
+
+/* Показываем элементы, когда происходит их анимация */
+.fadeInDown, .fadeOut{
+    visibility: visible;
+}
+
+.sticky-element{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background: indianred;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/*класс для элемента в фиксированном виде*/
+.sticky-element.stuck{
+    position: fixed;
+    top:100px;
+    left: 50%;
+    margin-left: -500px;
+}
+/*---------/CSS 3 ANIMATES------------*/
