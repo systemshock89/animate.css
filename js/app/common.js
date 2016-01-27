@@ -58,14 +58,12 @@
 
 
     /* Прилипающий элемент */
-    if( $(".sticky-element").is("div") ){
-        $.getScript( '/js/lib/waypoints-sticky.min.js', function() {
-
-            $('.sticky-element').waypoint('sticky', {
-                offset: $('header').height()
-            });
-
+    try {
+        $('.sticky-element').waypoint('sticky', {
+            offset: $('header').height()
         });
+    } catch (err) {
+
     }
     /* /Прилипающий элемент */
 
